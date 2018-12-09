@@ -286,19 +286,23 @@ class MCP23017:
         self._device = i2c
         self._address = address
         # Reset to all inputs with no pull-ups and no inverted polarity.
-        #self.iodir = 0xFFFF
-        #self.gppu = 0x0000
+        self.iodir = 0xFFFF
+        self.gppu = 0x0000
         self._write_u16le(_MCP23017_IPOLA, 0x0000)
 
     def _read_u16le(self, register):
         # Read an unsigned 16 bit little endian value from the specified 8-bit
         # register.
-        return self._device.readfrom_mem(self._address, register, 2)
+        self._device.readfrom_mem_into(self._address, register, _BUFFER)
+        return (_BUFFER[1] << 8) | _BUFFER[0]
 
     def _write_u16le(self, register, val):
         # Write an unsigned 16 bit little endian value to the specified 8-bit
         # register.
-        return self._device.writeto_mem(self._address, register, val)
+        buffer = bytearray(2)
+        buffer[0] = val & 0xFF
+        buffer[1] = (val >> 8) & 0xFF
+        self._device.writeto_mem(self._address, register, val)
 
     def _read_u8(self, register):
         # Read an unsigned 8 bit value from the specified 8-bit register.
