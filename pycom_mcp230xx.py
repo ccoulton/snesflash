@@ -61,18 +61,18 @@ _MCP23017_IPOLA         = const(0x02)
 _MCP23017_IPOLB         = const(0x03)
 _MCP23017_GPINTENA      = const(0x04)
 _MCP23017_GPINTENB      = const(0x05)
-_MCP23008_DEFVALA       = const(0x06)
-_MCP23008_DEFVALB       = const(0x07)
-_MCP23008_INTCONA       = const(0x08)
-_MCP23008_INTCONB       = const(0x09)
-_MCP23008_IOCONA        = const(0x0A)
-_MCP23008_IOCONB        = const(0x0B)
+_MCP23017_DEFVALA       = const(0x06)
+_MCP23017_DEFVALB       = const(0x07)
+_MCP23017_INTCONA       = const(0x08)
+_MCP23017_INTCONB       = const(0x09)
+_MCP23017_IOCONA        = const(0x0A)
+_MCP23017_IOCONB        = const(0x0B)
 _MCP23017_GPPUA         = const(0x0C)
 _MCP23017_GPPUB         = const(0x0D)
-_MCP23008_INTFA         = const(0x0E)
-_MCP23008_INTFB         = const(0x0F)
-_MCP23008_INTCAPA       = const(0x10)
-_MCP23008_INTCAPB       = const(0x11)
+_MCP23017_INTFA         = const(0x0E)
+_MCP23017_INTFB         = const(0x0F)
+_MCP23017_INTCAPA       = const(0x10)
+_MCP23017_INTCAPB       = const(0x11)
 _MCP23017_GPIOA         = const(0x12)
 _MCP23017_GPIOB         = const(0x13)
 _MCP23017_OLATA         = const(0x14)
@@ -207,7 +207,7 @@ class MCP23008:
 
     def _read_u8(self, register):
         # Read an unsigned 8 bit value from the specified 8-bit register.
-        return self._device.readfrom_mem(self._address, register)
+        return self._device.readfrom_mem(self._address, register, 1)
 
 
     def _write_u8(self, register, val):
@@ -245,6 +245,30 @@ class MCP23008:
     @gppu.setter
     def gppu(self, val):
         self._write_u8(_MCP23008_GPPU, val)
+
+    @property
+    def defval(self):
+        self._read_u8(_MCP23008_DEFVAL)
+
+    @defval.setter
+    def defval(self, val):
+        self._write_u8(_MCP23008_DEFVAL, val)
+
+    @property
+    def gpinten(self):
+        self._read_u8(_MCP23008_GPINTEN)
+
+    @gpinten.setter
+    def gpinten(self, val):
+        self._write_u8(_MCP23008_GPINTEN, val)
+
+    @property
+    def intcon(self):
+        self._read_u8(_MCP23008_INTCON)
+
+    @intcon.setter
+    def intcon(self, val):
+        self._write_u8(_MCP23008_INTCON, val)
 
     def get_pin(self, pin):
         #Convenience function to create an instance of the DigitalInOut class
