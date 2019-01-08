@@ -45,6 +45,7 @@ class SnesCart:
         self.addrchip.iodir = 0xFFFF
         self.bankchip.iodir = 0xFF
         self.datachip.iodir = 0xFF
+        pwr(False)
 
     @property
     def isLowROM(self):
@@ -60,8 +61,8 @@ class SnesCart:
             upByte = int(addr/256)
             lowByte = addr - (upByte*256)
             self.currentAddr = addr
-            if isLowROM:
-                upByte = upByte | 0x80
+            if isLowROM: #is not 0
+                upByte = upByte | 0x80 # or's 1 to a15 if LoRom
             if self.currentUpByte != upByte:
                 self.addrchip.gpiob = upByte
                 self.currentUpByte = upByte
@@ -139,6 +140,28 @@ class SnesCart:
         if isLowROM:
             actualROMSize *= 2
         return actualROMSize
+
+    def CX4setROMSize(self, ROMsize):
+        self.gotoOffset(0x007f52,False)
+        ROMSizeRegister = self.datachip.gpio
+        print("$007F52 offset reads  "+str(ROMSizeRegister))
+        self.datachip.iodir = 0x00
+        self.ioControls(0x13)
+        if ROMsize > 8:
+            if ROMSizeRegister == 1:
+                print("ROM is larger than 8 megs, writing 0x00 to cx4 reg")
+                self.datachip.gpio = 0x00
+            else:
+                print("CX4 register is at correct value, will not change")
+        else:
+            if ROMSizeRegister == 1:
+                print("CX4 Register is at Correct value, will not change")
+            else:
+                print("ROM is 8 megs, writing 0x01 to CX4 register")
+                self.datachip.gpio = 0x01
+        self.ioControls(0x16)
+        self.datachip.iodir = 0xFF
+        print("$007F52 offset now reads "+str(self.datachip.gpio))
 
     def ripROM(self, startBank, numberOfPages, isLowROM=None):
         isLowROM = self.isLowROM if isLowROM is None else isLowROM
@@ -306,7 +329,7 @@ def main():
 
     if ROMtype == 243:
         print("\nCapcom CX4 Rom Type Detected!")
-        #cart.CX4setROMSize(ROM.size)
+        cart.CX4setROMSize(ROM.size)
         print("")
 
     print("Rom Size:  "+str(ROMsize)+" Mbits")
@@ -340,56 +363,57 @@ def main():
 
     if isValid:
         g.write(cartname)
-    if readCart and os.path.exists(directory + cartname+ '.smc'):
-        print("rom exists not dumping again")
-        readCart = False
-    elif readCart:
-        print("Will not dump cart due to Options")
+        if readCart and os.path.exists(directory + cartname+ '.smc'):
+            print("rom exists not dumping again")
+            readCart = False
+        elif readCart:
+            print("Will not dump cart due to Options")
 
-    if readCart:
-        numOfRemainPages = 0
-        firstNumberOfPages = numberOfPages
-        timeStart = utime.time()
+        if readCart:
+            numOfRemainPages = 0
+            firstNumberOfPages = numberOfPages
+            timeStart = utime.time()
 
-    file = open(directory + cartname + '.smc', 'w')
+            file = open(directory + cartname + '.smc', 'w')
 
-    if isLowROM:
-        print("reading"+ str(numberOfPages)+ "low Rom Pages.")
-        data = cart.ripROM(0x00, firstNumberOfPages)
-    else:
-        if numberOfPages > 64:
-            numOfRemainPages = (numberOfPages - 64)
-            print("reading first of 64 of "+str(numberOfPages)+ "hi Rom Pages")
-            firstNumberOfPages = 64
+            if isLowROM:
+            print("reading"+ str(numberOfPages)+ "low Rom Pages.")
+            data = cart.ripROM(0x00, firstNumberOfPages)
         else:
-            print("reading "+ str(numberOfPages) + "Hi Rom Pages")
-        data = cart.ripROM(0xc0, firstNumberOfPages)
+            if numberOfPages > 64:
+                numOfRemainPages = (numberOfPages - 64)
+                print("reading first of 64 of "+str(numberOfPages)+ "hi Rom Pages")
+                firstNumberOfPages = 64
+            else:
+                print("reading "+ str(numberOfPages) + "Hi Rom Pages")
+            data = cart.ripROM(0xc0, firstNumberOfPages)
 
-        if numOfRemainPages > 0:
-            print("reading last "+str(numOfRemainPages) + "of High rom pages.")
-            data += cart.ripROM(0x40, firstNumberOfPages)
-    print(("\nEntire Checksum: "+str(hex(cart.totalChecksum))))
-    print(("\nHeader Checksum: "+str(hex(ROMchecksum))))
-    cart.totalChecksum = (cart.totalChecksum & 0xFFFF)
+            if numOfRemainPages > 0:
+                print("reading last "+str(numOfRemainPages) + "of High rom pages.")
+                data += cart.ripROM(0x40, firstNumberOfPages)
 
-    print("16-bit generated Checksum:  "+str(hex(cart.totalChecksum)))
+            print(("\nEntire Checksum: "+str(hex(cart.totalChecksum))))
+            print(("\nHeader Checksum: "+str(hex(ROMchecksum))))
+            cart.totalChecksum = (cart.totalChecksum & 0xFFFF)
 
-    print("checksum ok" if cart.totalChecksum == ROMchecksum else "checksum bad")
-    timeEnd = utime.time()
-    print("\nIt Took "+str(timeEnd - timeStart) + " seconds to read the cart")
+            print("16-bit generated Checksum:  "+str(hex(cart.totalChecksum)))
 
-    file.write(data)
-    file.close()
+            print("checksum ok" if cart.totalChecksum == ROMchecksum else "checksum bad")
+            timeEnd = utime.time()
+            print("\nIt Took "+str(timeEnd - timeStart) + " seconds to read the cart")
 
-    if readSRAM:
-        file = open(directory+cartname+'.srm','w')
-        timeStart = utime.time()
-        dump = cart.ripSRAM(convertedSRAMsize, ROMsize)
-        timeEnd = utime.time()
-        print("")
-        print("It Took "+ str(timeEnd-timeStart) + "seconds to Read SRAM data")
-        file.write(dump)
-        file.close()
+            file.write(data)
+            file.close()
+
+        if readSRAM:
+            file = open(directory+cartname+'.srm','w')
+            timeStart = utime.time()
+            dump = cart.ripSRAM(convertedSRAMsize, ROMsize)
+            timeEnd = utime.time()
+            print("")
+            print("It Took "+ str(timeEnd-timeStart) + "seconds to Read SRAM data")
+            file.write(dump)
+            file.close()
     else:
         g.write("NULL")
         g.close()
