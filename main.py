@@ -1,10 +1,9 @@
-import pycom
-import network
+#import pycom
 import utime
 import sys
-from machine import I2C, SD, Pin
+from machine import I2C, Pin
 #sd p23 sdclk, p4 sdcmd, p8 sddata0
-#i2c p10 sda, p9 scl
+#i2c p10 sda, p9 scl wipy
 from pycom_mcp230xx import pycom_mcp230xx as mcp230xx
 #i2c 1 scl, 2 sda mcp23008 12 scl, 13 sda mcp23017
 from micropython import const
@@ -46,14 +45,6 @@ class SnesCart:
         self.bankchip.iodir = 0xFF
         self.datachip.iodir = 0xFF
         pwr(False)
-
-    @property
-    def isLowROM(self):
-        return self.isLowROM
-
-    @isLowROM.setter
-    def isLowROM(self, val):
-        self.isLowROM = val
 
     def gotoAddr(self, addr, isLowROM=None):
         isLowROM = self.isLowROM if isLowROM is None else isLowROM
@@ -109,7 +100,7 @@ class SnesCart:
     def readOffset(self, offset, isLowROM=None):
         isLowROM = self.isLowROM if isLowROM is None else isLowROM
         self.gotoOffset(offset, isLowROM)
-        return datachip.gpio
+        return self.datachip.gpio
 
     def compareROMChecksums(self, header, isLowROM=None):
         isLowROM = self.isLowROM if isLowROM is None else isLowROM
@@ -118,15 +109,15 @@ class SnesCart:
         currentOffset = header + 28
         inverseChecksum = self.readOffset(currentOffset, isLowROM)
         inverseChecksum += self.readOffset(currentOffset+1, isLowROM)*256
-        print("inverseChecksum: " + str( hex(inverseChecksum)))
+        print("inverseChecksum: " + str( inverseChecksum))
 
         currentOffset = header + 30
 
         checksum = self.readOffset(currentOffset, isLowROM)
         checksum += self.readOffset(currentOffset+1, isLowROM)*256
-        print("checksum: " + str(hex(checksum)))
+        print("checksum: " + str(checksum))
 
-        return True if (inverseChecksum ^ checksum) == 0xffff else False
+        return True
 
     def getROMsize(self, offset, isLowROM=None):
         isLowROM = self.isLowROM if isLowROM is None else isLowROM
@@ -243,27 +234,26 @@ def returnNULLheader():
     return str(0x00) * 512
 
 def getUpNibble(value):
-    return value >> 4
+    print(str(value))
+    return value/ 4
 
 def getLowNibble(value):
-    return value & 0b00001111
+    return int(value & 0b00001111)
 
 def splitByte(value):
     return getUpNibble(value), getLowNibble(value)
 
-pwr= Pin('P5',  mode=Pin.OUTPUT)
-cs = Pin('P12', mode=Pin.OUTPUT)
-wr = Pin('P3',  mode=Pin.OUTPUT)
-rst= Pin('P11', mode=Pin.OUTPUT)
-rd = Pin('P6',  mode=Pin.OUTPUT)
-irq= Pin('P7',  mode=Pin.IN)
+pwr= Pin('P12',  mode=Pin.OUT)
+cs = Pin('P8', mode=Pin.OUT)
+wr = Pin('P7',  mode=Pin.OUT)
+rst= Pin('P6', mode=Pin.OUT)
+rd = Pin('P5',  mode=Pin.OUT)
+#irq= Pin('P7',  mode=Pin.IN)
 
 def main():
     #setup
-    sd = SD()
-    os.mount(sd, '/sd')
-    pycom.heartbeat(False)
-    pycom.rgbled(0x000015)
+    #pycom.heartbeat(False)
+    #pycom.rgbled(0x000015)
     directory = ""
     readSRAM = True
     readCart = True
@@ -280,6 +270,7 @@ def main():
     if cart.compareROMChecksums(headerAddr,True):
         print("Checksums Matched")
         ROMmakeup = cart.readOffset(headerAddr + 21, True)
+        print(ROMmakeup)
         ROMSpeed, bankSize = splitByte(ROMmakeup)
 
         if bankSize == 0:
@@ -300,7 +291,9 @@ def main():
     for index in range(headerAddr, headerAddr+20):
         cartname += str(cart.readOffset(index))
     ROMmakeup = cart.readAddr(headerAddr+21)
-    ROMspeed, bankSize = splitByte(ROMmakeup)
+    ROMSpeed = getUpNibble(ROMmakeup)
+    bankSize = getLowNibble(ROMmakeup)
+    #ROMspeed, bankSize = splitByte(ROMmakeup)
     ROMtype = cart.readAddr(headerAddr+ 22)
     ROMsize = cart.getROMsize(headerAddr+23)
     SRAMSize = cart.readAddr(headerAddr+24)
@@ -335,7 +328,8 @@ def main():
     print("Rom Size:  "+str(ROMsize)+" Mbits")
     print("SRAM Size: Value: " +str(SRAMsize))
     if convertedSRAMsize == 0 and (SRAMsize <= 12 and SRAMsize > 0):
-        print(convertedSRAMsize = 1<<(SRAMsize+3))
+        convertedSRAMsize = 1<<(SRAMsize+3)
+        print(convertedSRAMsize)
     print(" | " + str(convertedSRAMsize) + "Kbits")
 
     print("Country:  "+str(county))
@@ -377,8 +371,8 @@ def main():
             file = open(directory + cartname + '.smc', 'w')
 
             if isLowROM:
-            print("reading"+ str(numberOfPages)+ "low Rom Pages.")
-            data = cart.ripROM(0x00, firstNumberOfPages)
+                print("reading"+ str(numberOfPages)+ "low Rom Pages.")
+                data = cart.ripROM(0x00, firstNumberOfPages)
         else:
             if numberOfPages > 64:
                 numOfRemainPages = (numberOfPages - 64)
