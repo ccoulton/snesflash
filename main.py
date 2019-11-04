@@ -1,20 +1,33 @@
 #import pycom
+# p0-12 on rst side, p13-23 on vin side
 import utime
 import sys
 from machine import I2C, Pin
 #sd p23 sdclk, p4 sdcmd, p8 sddata0
 #i2c p10 sda, p9 scl wipy
+'''
+pwr= Pin('P12',  mode=Pin.OUT)
+cs = Pin('P8', mode=Pin.OUT)
+wr = Pin('P7',  mode=Pin.OUT)
+rst= Pin('P6', mode=Pin.OUT)
+rd = Pin('P5',  mode=Pin.OUT)
+'''
 from pycom_mcp230xx import pycom_mcp230xx as mcp230xx
 #i2c 1 scl, 2 sda mcp23008 12 scl, 13 sda mcp23017
 from micropython import const
 
 HIROMPAGE  = const(65536)
 LOWROMPAGE = const(32768)
+_PWR = const(0x10)
+_CS  = const(0x08)
+_WR  = const(0x04)
+_RST = const(0x02)
+_RD  = const(0x01)
 
 class SnesCart:
     def __init__(self, address=0x20, bank=0x21, data=0x22):
         i2c = I2C(0, I2C.MASTER)
-        i2c.init(I2C.MASTER, baudrate=400000)
+        i2c.init(I2C.MASTER, baudrate=100000)
         self.addrchip = mcp230xx.MCP23017(i2c, address)
         self.bankchip = mcp230xx.MCP23008(i2c, bank)
         self.datachip = mcp230xx.MCP23008(i2c, data)
@@ -25,7 +38,7 @@ class SnesCart:
 
         self.datachip.gppu = 0xFF #enable pullups
         self.datachip.defval = 0xff #expect snes data to defaul at 0xff`
-        self.datachip.gpinten = 0x89 #set up some of the pins to be inqenable
+        self.datachip.gpinten = 0x89 #set up some of the pins to be interrupts?
         self.datachip.intcon = 0xFF #compares irq to defval
         self.isLowROM = False
         self.currentAddr = -1
@@ -39,7 +52,7 @@ class SnesCart:
         self.gotoAddr(00, 0)
         self.gotoBank(00)
         self.datachip.gppu = 0x00
-        self.datachip.defval = 0xff
+        self.datachip.defval = 0x00
         self.datachip.gpinten = 0x00
         self.addrchip.iodir = 0xFFFF
         self.bankchip.iodir = 0xFF
@@ -67,17 +80,18 @@ class SnesCart:
     def gotoBank(self, bank):
         if bank != self.currentBank:
             self.bankchip.gpio = bank
+            self.currentBank = bank
 
-    def read32(self, addr, isLowROM=None):
+    def read2Byte(self, addr, isLowROM = None):
         isLowROM = self.isLowROM if isLowROM is None else isLowROM
-        output = self.readAddr(addr, isLowROM)
-        output += self.readAddr(addr+1, isLowROM)*256
+        output = int.from_bytes(self.readAddr(addr, isLowROM), 'big')
+        output += int.from_bytes(self.readAddr(addr+1, isLowROM), 'big')*256
         return output
 
     def readAddr(self, addr, isLowROM=None):
         isLowROM = self.isLowROM if isLowROM is None else isLowROM
         self.gotoAddr(addr, isLowROM)
-        return datachip.gpio
+        return self.datachip.gpio
 
     def readAddrBank(self, addr, bank):
         self.gotoBank(bank)
@@ -100,24 +114,21 @@ class SnesCart:
     def readOffset(self, offset, isLowROM=None):
         isLowROM = self.isLowROM if isLowROM is None else isLowROM
         self.gotoOffset(offset, isLowROM)
-        return self.datachip.gpio
+        return int.from_bytes(self.datachip.gpio, 'big')
 
     def compareROMChecksums(self, header, isLowROM=None):
         isLowROM = self.isLowROM if isLowROM is None else isLowROM
-        if isLowROM:
-            self.ioControls(0x16)
+        self.readRom()
         currentOffset = header + 28
-        inverseChecksum = self.readOffset(currentOffset, isLowROM)
-        inverseChecksum += self.readOffset(currentOffset+1, isLowROM)*256
-        print("inverseChecksum: " + str( inverseChecksum))
+        print(hex(self.readOffset(currentOffset, isLowROM)))
+        print(hex(self.readOffset(currentOffset+1, isLowROM)))
 
         currentOffset = header + 30
 
         checksum = self.readOffset(currentOffset, isLowROM)
         checksum += self.readOffset(currentOffset+1, isLowROM)*256
-        print("checksum: " + str(checksum))
-
-        return True
+        print("checksum: " , hex(checksum))
+        return (checksum ^ inverseChecksum == 0xffff)
 
     def getROMsize(self, offset, isLowROM=None):
         isLowROM = self.isLowROM if isLowROM is None else isLowROM
@@ -137,7 +148,7 @@ class SnesCart:
         ROMSizeRegister = self.datachip.gpio
         print("$007F52 offset reads  "+str(ROMSizeRegister))
         self.datachip.iodir = 0x00
-        self.ioControls(0x13)
+        self._ioControls(0x13)
         if ROMsize > 8:
             if ROMSizeRegister == 1:
                 print("ROM is larger than 8 megs, writing 0x00 to cx4 reg")
@@ -150,7 +161,7 @@ class SnesCart:
             else:
                 print("ROM is 8 megs, writing 0x01 to CX4 register")
                 self.datachip.gpio = 0x01
-        self.ioControls(0x16)
+        self.readRom()
         self.datachip.iodir = 0xFF
         print("$007F52 offset now reads "+str(self.datachip.gpio))
 
@@ -160,10 +171,7 @@ class SnesCart:
         pageChecksum = 0
         currentByte = 0
         bank = 0
-        if isLowROM:
-            startOffset = startBank * 0x8000
-        else:
-            startOffset = startBank * 0x1000
+        startOffset = startBank* 0x8000 if isLowROM else startBank * 0x10000
         offset = startOffset
         self.gotoOffset(startOffset, isLowROM)
         print("---Start Cart Read----\n")
@@ -171,7 +179,7 @@ class SnesCart:
             print("currentBank: dec: " + str(self.currentBank) + "; Hex: "+str(hex(self.currentBank)))
         while bank == self.currentBank:
             currentByte = self.datachip.gpio
-            ROMdata +=str(currentByte)
+            ROMdata += str(currentByte)
             pageChecksum += currentByte
             offset += 1
             self.gotoOffset(offset, isLowROM)
@@ -181,7 +189,7 @@ class SnesCart:
             self.totalChecksum += pageChecksum
             pageChecksum = 0
             print("\nCurrent checksum: "+str(self.totalChecksum)+" | Hex: "+str(hex(self.totalChecksum)))
-            #print("Header checksum: "+str(hex(ROMchecksum))+"\n"
+            print("Header checksum: "+str(hex(ROMchecksum))+"\n")
         return ROMdata
 
     def ripSRAM(self, SRAMsize, ROMsize, isLowROM=None):
@@ -214,12 +222,43 @@ class SnesCart:
             else:
                 self.gotoAddr(self.currentAddr +1, False)
         self.ioControls(0x16) # pwr, rst, and cs high, 0x06 for pmosfet
-        print(str(currentByte) + "SRM bytes read")
+        print(str(currentByte) + "SRAM bytes read")
         return SRAMdata
 
-    def ioControls(self, inputs):
-    #commands come in as hex, originally used pmosfet, so power was low active
-    #io7: /irq | io4: cart power | io3: /cs | io2: /wr | io1: /rst | io0 /rd
+    #readRom = /rd /cs /reset low, /wr hi
+    def readRom(self):  #0x14\
+        self._ioControls(_PWR | _WR)
+
+'''
+# readSram=
+#     lowrom: /cs /rd low, /rst /wr high, a15 ba4 ba5 hi
+#     higrom: /rd low, /rst /wr /cs high, a13 a14 ba5 hi
+'''
+    def readSRAM(self, isLowROM=None):
+        isLowROM = self.isLowROM if isLowROM is None else isLowROM
+        if isLowROM:        #0x16
+            self._ioControls(_PWR | _RST | _WR)
+        else:               #0x1e
+            self._ioControls(_PWR | _RST | _WR | _CS)
+
+'''
+# writsram=
+#    lowrom: /cs /wr low, /rst /rd high, a15 ba4 ba5 hi
+#    higrom: /wr /low, /rst /rd cs high, a13 a14 ba5 hi
+'''
+    def writeSRAM(self,isLowROM=None):
+        isLowROM = self.isLowROM if isLowROM is None else isLowROM
+        if isLowROM:        #0x11
+            self._ioControls(_RST | _RD)
+        else:               #0x19
+            self._ioControls(_RST | _RD | _CS)
+
+'''
+#commands come in as hex, originally used pmosfet, so power was low active
+# irq|x|x|pwr // cs|wr|rst|rd
+#io7: /irq | io4: cart power | io3: /cs | io2: /wr | io1: /rst | io0 /rd
+'''
+    def _ioControls(self, inputs):
         bools = []
         for index in range(8):
             bools.append(inputs & 1)
@@ -230,19 +269,6 @@ class SnesCart:
         rst(bools[1])
         rd(bools[0])
 
-def returnNULLheader():
-    return str(0x00) * 512
-
-def getUpNibble(value):
-    print(str(value))
-    return value/ 4
-
-def getLowNibble(value):
-    return int(value & 0b00001111)
-
-def splitByte(value):
-    return getUpNibble(value), getLowNibble(value)
-
 pwr= Pin('P12',  mode=Pin.OUT)
 cs = Pin('P8', mode=Pin.OUT)
 wr = Pin('P7',  mode=Pin.OUT)
@@ -250,10 +276,22 @@ rst= Pin('P6', mode=Pin.OUT)
 rd = Pin('P5',  mode=Pin.OUT)
 #irq= Pin('P7',  mode=Pin.IN)
 
+def returnNULLheader():
+    return chr(0x00) * 512
+
+def getUpNibble(value):
+    return value >> 4
+
+def getLowNibble(value):
+    return value & 0x0F
+
+def splitByte(value):
+    return getUpNibble(value), getLowNibble(value)
+
 def main():
-    #setup
-    #pycom.heartbeat(False)
-    #pycom.rgbled(0x000015)
+'''embedded cart info end of first page,
+    32704/7fc0:lowrom
+    65472/ffc0:highrom'''
     directory = ""
     readSRAM = True
     readCart = True
@@ -261,7 +299,7 @@ def main():
     convertedSRAMsize = 0
     val = 0
     databyte = ""
-    cart.ioControls(0x16)
+    cart.readRom()
     utime.sleep(.25)
     cartname = ""
     headerAddr = 32704
@@ -270,7 +308,7 @@ def main():
     if cart.compareROMChecksums(headerAddr,True):
         print("Checksums Matched")
         ROMmakeup = cart.readOffset(headerAddr + 21, True)
-        print(ROMmakeup)
+        print(hex(ROMmakeup))
         ROMSpeed, bankSize = splitByte(ROMmakeup)
 
         if bankSize == 0:
@@ -286,10 +324,12 @@ def main():
             print("Bank Config Read Error")
     else:
         print("Checksums didn't match.")
+        return
     currentAddr = headerAddr
-    headerAddr = cart.gotoOffset(headerAddr)
-    for index in range(headerAddr, headerAddr+20):
-        cartname += str(cart.readOffset(index))
+    cart.gotoOffset(headerAddr)
+    cart.readOffset(headerAddr)
+    for index in range(headerAddr, (headerAddr+20)):
+        cartname += chr(cart.readOffset(index))
     ROMmakeup = cart.readAddr(headerAddr+21)
     ROMSpeed = getUpNibble(ROMmakeup)
     bankSize = getLowNibble(ROMmakeup)
@@ -305,13 +345,13 @@ def main():
     inverseChecksum = cart.read32(currentAddr)
 
     currentAddr += 2
-    checksum = cart.read32(currentAddr)
+    checksum = cart.read2Byte(currentAddr)
 
     currentAddr += 2
-    VBLvector = cart.read32(currentAddr)
+    VBLvector = cart.read2Byte(currentAddr)
 
     currentAddr += 2
-    resetVector = cart.read32(currentAddr)
+    resetVector = cart.read2Byte(currentAddr)
 
     numberOfPages = cart.getNumOfPages(ROMsize)
     print("Game Title:  "+cartname)
@@ -357,9 +397,10 @@ def main():
 
     if isValid:
         g.write(cartname)
-        if readCart and os.path.exists(directory + cartname+ '.smc'):
-            print("rom exists not dumping again")
-            readCart = False
+        if readCart:
+            if os.path.exists(directory + cartname+ '.smc'):
+                print("rom exists not dumping again")
+                readCart = False
         elif readCart:
             print("Will not dump cart due to Options")
 
@@ -373,25 +414,24 @@ def main():
             if isLowROM:
                 print("reading"+ str(numberOfPages)+ "low Rom Pages.")
                 data = cart.ripROM(0x00, firstNumberOfPages)
-        else:
-            if numberOfPages > 64:
-                numOfRemainPages = (numberOfPages - 64)
-                print("reading first of 64 of "+str(numberOfPages)+ "hi Rom Pages")
-                firstNumberOfPages = 64
             else:
-                print("reading "+ str(numberOfPages) + "Hi Rom Pages")
-            data = cart.ripROM(0xc0, firstNumberOfPages)
+                if numberOfPages > 64:
+                    numOfRemainPages = (numberOfPages - 64)
+                    print("reading first of 64 of "+str(numberOfPages)+ "hi Rom Pages")
+                    firstNumberOfPages = 64
+                else:
+                    print("reading "+ str(numberOfPages) + "Hi Rom Pages")
+                data = cart.ripROM(0xc0, firstNumberOfPages)
 
-            if numOfRemainPages > 0:
-                print("reading last "+str(numOfRemainPages) + "of High rom pages.")
-                data += cart.ripROM(0x40, firstNumberOfPages)
+                if numOfRemainPages > 0:
+                    print("reading last "+str(numOfRemainPages) + "of High rom pages.")
+                    data += cart.ripROM(0x40, firstNumberOfPages)
 
             print(("\nEntire Checksum: "+str(hex(cart.totalChecksum))))
             print(("\nHeader Checksum: "+str(hex(ROMchecksum))))
             cart.totalChecksum = (cart.totalChecksum & 0xFFFF)
 
             print("16-bit generated Checksum:  "+str(hex(cart.totalChecksum)))
-
             print("checksum ok" if cart.totalChecksum == ROMchecksum else "checksum bad")
             timeEnd = utime.time()
             print("\nIt Took "+str(timeEnd - timeStart) + " seconds to read the cart")
@@ -400,14 +440,12 @@ def main():
             file.close()
 
         if readSRAM:
-            file = open(directory+cartname+'.srm','w')
-            timeStart = utime.time()
-            dump = cart.ripSRAM(convertedSRAMsize, ROMsize)
-            timeEnd = utime.time()
-            print("")
-            print("It Took "+ str(timeEnd-timeStart) + "seconds to Read SRAM data")
-            file.write(dump)
-            file.close()
+            with open(directory+cartname+'.srm','w') as file:
+                timeStart = utime.time()
+                dump = cart.ripSRAM(convertedSRAMsize, ROMsize)
+                timeEnd = utime.time()
+                print("\nIt Took "+ str(timeEnd-timeStart) + "seconds to Read SRAM data")
+                file.write(dump)
     else:
         g.write("NULL")
         g.close()

@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="53cm" height="69cm" viewBox="13 -32 1053 1367" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ff0000" x="33" y="1094" width="300" height="177.75"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="33" y="1094" width="300" height="177.75"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="220" y="260" width="80" height="180"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="220" y="260" width="80" height="180"/>
+  </g>
+  <g>
+    <g>
+      <rect style="fill: #ffffff" x="800" y="80" width="80" height="180"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="800" y="80" width="80" height="180"/>
+    </g>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="803" y="106">
+      <tspan x="803" y="106">Q1</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="803" y="126">
+      <tspan x="803" y="126">Q2</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="803" y="146">
+      <tspan x="803" y="146">Q3</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="803" y="166">
+      <tspan x="803" y="166">Q4</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="803" y="186">
+      <tspan x="803" y="186">Q5</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="803" y="206">
+      <tspan x="803" y="206">Q6</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="803" y="226">
+      <tspan x="803" y="226">Q7</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="803" y="246">
+      <tspan x="803" y="246">GND</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="855" y="106">
+      <tspan x="855" y="106">Vcc</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="860" y="126">
+      <tspan x="860" y="126">Q0</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="860" y="146">
+      <tspan x="860" y="146">DS</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="860" y="166">
+      <tspan x="860" y="166">OE</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="839" y="186">
+      <tspan x="839" y="186">ST_CP</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="839" y="206">
+      <tspan x="839" y="206">SH-CP</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="858" y="226">
+      <tspan x="858" y="226">MR</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="843" y="246">
+      <tspan x="843" y="246">SOUT</tspan>
+    </text>
+  </g>
+  <g>
+    <g>
+      <rect style="fill: #ffffff" x="800" y="300" width="80" height="180"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="800" y="300" width="80" height="180"/>
+    </g>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="803" y="326">
+      <tspan x="803" y="326">Q1</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="803" y="346">
+      <tspan x="803" y="346">Q2</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="803" y="366">
+      <tspan x="803" y="366">Q3</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="803" y="386">
+      <tspan x="803" y="386">Q4</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="803" y="406">
+      <tspan x="803" y="406">Q5</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="803" y="426">
+      <tspan x="803" y="426">Q6</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="803" y="446">
+      <tspan x="803" y="446">Q7</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="803" y="466">
+      <tspan x="803" y="466">GND</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="855" y="326">
+      <tspan x="855" y="326">Vcc</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="860" y="346">
+      <tspan x="860" y="346">Q0</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="860" y="366">
+      <tspan x="860" y="366">DS</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="860" y="386">
+      <tspan x="860" y="386">OE</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="839" y="406">
+      <tspan x="839" y="406">ST_CP</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="839" y="426">
+      <tspan x="839" y="426">SH-CP</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="858" y="446">
+      <tspan x="858" y="446">MR</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="843" y="466">
+      <tspan x="843" y="466">SOUT</tspan>
+    </text>
+  </g>
+  <g>
+    <g>
+      <rect style="fill: #ffffff" x="800" y="520" width="80" height="180"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="800" y="520" width="80" height="180"/>
+    </g>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="803" y="546">
+      <tspan x="803" y="546">Q1</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="803" y="566">
+      <tspan x="803" y="566">Q2</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="803" y="586">
+      <tspan x="803" y="586">Q3</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="803" y="606">
+      <tspan x="803" y="606">Q4</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="803" y="626">
+      <tspan x="803" y="626">Q5</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="803" y="646">
+      <tspan x="803" y="646">Q6</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="803" y="666">
+      <tspan x="803" y="666">Q7</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="803" y="686">
+      <tspan x="803" y="686">GND</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="855" y="546">
+      <tspan x="855" y="546">Vcc</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="860" y="566">
+      <tspan x="860" y="566">Q0</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="860" y="586">
+      <tspan x="860" y="586">DS</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="860" y="606">
+      <tspan x="860" y="606">OE</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="839" y="626">
+      <tspan x="839" y="626">ST_CP</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="839" y="646">
+      <tspan x="839" y="646">SH-CP</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="858" y="666">
+      <tspan x="858" y="666">MR</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="843" y="686">
+      <tspan x="843" y="686">SOUT</tspan>
+    </text>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="300" y="440">
+    <tspan x="300" y="440">1</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="800" y="80">
+    <tspan x="800" y="80">1</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="800" y="300">
+    <tspan x="800" y="300">1</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="800" y="520">
+    <tspan x="800" y="520">1</tspan>
+  </text>
+  <g>
+    <g>
+      <rect style="fill: #ffffff" x="240" y="500" width="40" height="300"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="240" y="500" width="40" height="300"/>
+    </g>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="257" y="786">
+      <tspan x="257" y="786">2</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="257" y="766">
+      <tspan x="257" y="766">3</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="257" y="746">
+      <tspan x="257" y="746">4</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="257" y="726">
+      <tspan x="257" y="726">5</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="257" y="706">
+      <tspan x="257" y="706">6</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="257" y="686">
+      <tspan x="257" y="686">7</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="257" y="666">
+      <tspan x="257" y="666">8</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="257" y="646">
+      <tspan x="257" y="646">9</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="253" y="626">
+      <tspan x="253" y="626">10</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="253" y="606">
+      <tspan x="253" y="606">11</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="253" y="586">
+      <tspan x="253" y="586">12</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="253" y="566">
+      <tspan x="253" y="566">13</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="246" y="546">
+      <tspan x="246" y="546">GND</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="253" y="526">
+      <tspan x="253" y="526">5V</tspan>
+    </text>
+  </g>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="580,221 598,221 600,211 604,231 608,211 612,231 616,211 620,231 622,221 640,221 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="580,241 598,241 600,231 604,251 608,231 612,251 616,231 620,251 622,241 640,241 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="580,261 598,261 600,251 604,271 608,251 612,271 616,251 620,271 622,261 640,261 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="580,281 598,281 600,271 604,291 608,271 612,291 616,271 620,291 622,281 640,281 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="580,301 598,301 600,291 604,311 608,291 612,311 616,291 620,311 622,301 640,301 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="580,321 598,321 600,311 604,331 608,311 612,331 616,311 620,331 622,321 640,321 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="580,341 598,341 600,331 604,351 608,331 612,351 616,331 620,351 622,341 640,341 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="580,361 598,361 600,351 604,371 608,351 612,371 616,351 620,371 622,361 640,361 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="580,381 598,381 600,371 604,391 608,371 612,391 616,371 620,391 622,381 640,381 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="580,421 598,421 600,411 604,431 608,411 612,431 616,411 620,431 622,421 640,421 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="580,401 598,401 600,391 604,411 608,391 612,411 616,391 620,411 622,401 640,401 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="580,441 598,441 600,431 604,451 608,431 612,451 616,431 620,451 622,441 640,441 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="580,461 598,461 600,451 604,471 608,451 612,471 616,451 620,471 622,461 640,461 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="580,561 598,561 600,551 604,571 608,551 612,571 616,551 620,571 622,561 640,561 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="420,221 438,221 440,211 444,231 448,211 452,231 456,211 460,231 462,221 480,221 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="420,241 438,241 440,231 444,251 448,231 452,251 456,231 460,251 462,241 480,241 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="420,261 438,261 440,251 444,271 448,251 452,271 456,251 460,271 462,261 480,261 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="420,281 438,281 440,271 444,291 448,271 452,291 456,271 460,291 462,281 480,281 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="420,301 438,301 440,291 444,311 448,291 452,311 456,291 460,311 462,301 480,301 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="420,321 438,321 440,311 444,331 448,311 452,331 456,311 460,331 462,321 480,321 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="420,341 438,341 440,331 444,351 448,331 452,351 456,331 460,351 462,341 480,341 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="420,361 438,361 440,351 444,371 448,351 452,371 456,351 460,371 462,361 480,361 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="420,381 438,381 440,371 444,391 448,371 452,391 456,371 460,391 462,381 480,381 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="420,421 438,421 440,411 444,431 448,411 452,431 456,411 460,431 462,421 480,421 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="420,401 438,401 440,391 444,411 448,391 452,411 456,391 460,411 462,401 480,401 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="420,441 438,441 440,431 444,451 448,431 452,451 456,431 460,451 462,441 480,441 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="420,621 438,621 440,611 444,631 448,611 452,631 456,611 460,631 462,621 480,621 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="420,561 438,561 440,551 444,571 448,551 452,571 456,551 460,571 462,561 480,561 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="640,221 680,221 680,160 800,160 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="800,180 700,180 700,241 640,241 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="640,261 720,261 720,200 800,200 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="640,281 740,281 740,220 800,220 "/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="640" y1="321" x2="800" y2="320"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="640" y1="341" x2="800" y2="340"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="640" y1="361" x2="800" y2="360"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="640" y1="381" x2="800" y2="380"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="640" y1="401" x2="800" y2="400"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="640" y1="421" x2="800" y2="420"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="640" y1="441" x2="800" y2="440"/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="420,221 420,221 420,140 800,140 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="440,241 400,241 400,120 800,120 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="440,261 380,261 380,100 800,100 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="440,281 360,280 360,60 900,60 900,120 880,120 "/>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="280" y="426">
+    <tspan x="280" y="426">Q1</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="280" y="406">
+    <tspan x="280" y="406">Q2</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="280" y="386">
+    <tspan x="280" y="386">Q3</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="280" y="366">
+    <tspan x="280" y="366">Q4</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="280" y="346">
+    <tspan x="280" y="346">Q5</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="280" y="326">
+    <tspan x="280" y="326">Q6</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="280" y="306">
+    <tspan x="280" y="306">Q7</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="269" y="286">
+    <tspan x="269" y="286">GND</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="223" y="426">
+    <tspan x="223" y="426">Vcc</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="223" y="406">
+    <tspan x="223" y="406">Q0</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="223" y="386">
+    <tspan x="223" y="386">DS</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="223" y="366">
+    <tspan x="223" y="366">OE</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="223" y="346">
+    <tspan x="223" y="346">ST_CP</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="223" y="326">
+    <tspan x="223" y="326">SH_CP</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="223" y="306">
+    <tspan x="223" y="306">MR</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="223" y="286">
+    <tspan x="223" y="286">SOUT</tspan>
+  </text>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="420" y1="301" x2="300" y2="300"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="420" y1="321" x2="300" y2="320"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="420" y1="341" x2="300" y2="340"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="420" y1="361" x2="300" y2="360"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="420" y1="381" x2="300" y2="380"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="420" y1="401" x2="300" y2="400"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="420" y1="421" x2="300" y2="420"/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="420,441 380,440 380,460 200,460 200,400 220,400 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="440,561 400,560 400,700 760,700 760,580 800,580 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="420,621 420,680 740,679 740,539 800,539 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="640,461 760,460 760,500 900,500 900,560 880,560 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="640,301 760,300 760,280 900,279 900,340 880,339 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="280,780 380,780 380,480 480,480 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="280,760 360,760 360,500 480,500 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="280,740 340,740 340,520 480,520 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="280,720 320,720 320,540 480,540 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="240,700 220,700 220,820 640,820 640,480 580,480 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="240,680 200,680 200,840 660,840 660,500 580,500 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="240,660 180,660 180,860 680,860 680,520 580,520 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="240,640 160,640 160,880 700,880 700,540 580,540 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="240,560 220,560 220,480 480,460 "/>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="823" y="297">
+    <tspan x="823" y="297">BANK</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="809" y="77">
+    <tspan x="809" y="77">ADR-HIGH</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="229" y="256">
+    <tspan x="229" y="256">ADR-LOW</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="809" y="517">
+    <tspan x="809" y="517">CONTROL</tspan>
+  </text>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="240,580 180,580 180,40 920,40 920,140 880,140 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="880,240 940,240 940,20 160,20 160,380 220,380 "/>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="400" y="1220">
+    <tspan x="400" y="1220">Byteorder when sending from Arduino:</tspan>
+    <tspan x="400" y="1236">1. CONTROL</tspan>
+    <tspan x="400" y="1252">2. BANK</tspan>
+    <tspan x="400" y="1268">3. ADR-LOW</tspan>
+    <tspan x="400" y="1284">4. ADR-HIGH</tspan>
+    <tspan x="400" y="1300">--&gt; Always send all 4 bytes!!!</tspan>
+  </text>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="220,280 140,280 140,0 960,0 960,360 880,360 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="880,460 920,460 920,580 880,580 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="240,520 20,520 20,1020 1060,1020 1060,540 880,540 "/>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="980" y1="920" x2="980" y2="944"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="970" y1="944" x2="990" y2="944"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="970" y1="956" x2="990" y2="956"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="980" y1="956" x2="980" y2="980"/>
+  </g>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="240,620 140,620 140,900 980,900 980,620 880,620 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="240,540 40,540 40,1000 980,1000 980,980 "/>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="980" y1="920" x2="980" y2="900"/>
+    <path style="fill: #000000" d="M 980 900 C 982.5,900 985,902.5 985,905 C 985,907.5 982.5,910 980,910 C 977.5,910 975,907.5 975,905 C 975,902.5 977.5,900 980,900z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 980 900 C 982.5,900 985,902.5 985,905 C 985,907.5 982.5,910 980,910 C 977.5,910 975,907.5 975,905 C 975,902.5 977.5,900 980,900"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="880,400 980,400 980,620 "/>
+    <path style="fill: #000000" d="M 980 620 C 977.5,620 975,617.5 975,615 C 975,612.5 977.5,610 980,610 C 982.5,610 985,612.5 985,615 C 985,617.5 982.5,620 980,620z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 980 620 C 977.5,620 975,617.5 975,615 C 975,612.5 977.5,610 980,610 C 982.5,610 985,612.5 985,615 C 985,617.5 982.5,620 980,620"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="880,180 980,180 980,400 "/>
+    <path style="fill: #000000" d="M 980 400 C 977.5,400 975,397.5 975,395 C 975,392.5 977.5,390 980,390 C 982.5,390 985,392.5 985,395 C 985,397.5 982.5,400 980,400z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 980 400 C 977.5,400 975,397.5 975,395 C 975,392.5 977.5,390 980,390 C 982.5,390 985,392.5 985,395 C 985,397.5 982.5,400 980,400"/>
+  </g>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="240,600 120,600 120,920 1000,920 1000,640 880,640 "/>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="880,420 1000,420 1000,640 "/>
+    <path style="fill: #000000" d="M 1000 640 C 997.5,640 995,637.5 995,635 C 995,632.5 997.5,630 1000,630 C 1002.5,630 1005,632.5 1005,635 C 1005,637.5 1002.5,640 1000,640z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 1000 640 C 997.5,640 995,637.5 995,635 C 995,632.5 997.5,630 1000,630 C 1002.5,630 1005,632.5 1005,635 C 1005,637.5 1002.5,640 1000,640"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="880,200 1000,200 1000,420 "/>
+    <path style="fill: #000000" d="M 1000 420 C 997.5,420 995,417.5 995,415 C 995,412.5 997.5,410 1000,410 C 1002.5,410 1005,412.5 1005,415 C 1005,417.5 1002.5,420 1000,420z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 1000 420 C 997.5,420 995,417.5 995,415 C 995,412.5 997.5,410 1000,410 C 1002.5,410 1005,412.5 1005,415 C 1005,417.5 1002.5,420 1000,420"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="880,600 1040,600 1040,1000 980,1000 "/>
+    <path style="fill: #000000" d="M 980 1000 C 980,997.5 982.5,995 985,995 C 987.5,995 990,997.5 990,1000 C 990,1002.5 987.5,1005 985,1005 C 982.5,1005 980,1002.5 980,1000z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 980 1000 C 980,997.5 982.5,995 985,995 C 987.5,995 990,997.5 990,1000 C 990,1002.5 987.5,1005 985,1005 C 982.5,1005 980,1002.5 980,1000"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="880,380 1040,380 1040,600 "/>
+    <path style="fill: #000000" d="M 1040 600 C 1037.5,600 1035,597.5 1035,595 C 1035,592.5 1037.5,590 1040,590 C 1042.5,590 1045,592.5 1045,595 C 1045,597.5 1042.5,600 1040,600z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 1040 600 C 1037.5,600 1035,597.5 1035,595 C 1035,592.5 1037.5,590 1040,590 C 1042.5,590 1045,592.5 1045,595 C 1045,597.5 1042.5,600 1040,600"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="880,160 1040,160 1040,380 "/>
+    <path style="fill: #000000" d="M 1040 380 C 1037.5,380 1035,377.5 1035,375 C 1035,372.5 1037.5,370 1040,370 C 1042.5,370 1045,372.5 1045,375 C 1045,377.5 1042.5,380 1040,380z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 1040 380 C 1037.5,380 1035,377.5 1035,375 C 1035,372.5 1037.5,370 1040,370 C 1042.5,370 1045,372.5 1045,375 C 1045,377.5 1042.5,380 1040,380"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="880,320 1060,320 1060,540 "/>
+    <path style="fill: #000000" d="M 1060 540 C 1057.5,540 1055,537.5 1055,535 C 1055,532.5 1057.5,530 1060,530 C 1062.5,530 1065,532.5 1065,535 C 1065,537.5 1062.5,540 1060,540z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 1060 540 C 1057.5,540 1055,537.5 1055,535 C 1055,532.5 1057.5,530 1060,530 C 1062.5,530 1065,532.5 1065,535 C 1065,537.5 1062.5,540 1060,540"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="880,100 1060,100 1060,320 "/>
+    <path style="fill: #000000" d="M 1060 320 C 1057.5,320 1055,317.5 1055,315 C 1055,312.5 1057.5,310 1060,310 C 1062.5,310 1065,312.5 1065,315 C 1065,317.5 1062.5,320 1060,320z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 1060 320 C 1057.5,320 1055,317.5 1055,315 C 1055,312.5 1057.5,310 1060,310 C 1062.5,310 1065,312.5 1065,315 C 1065,317.5 1062.5,320 1060,320"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="220,420 20,420 20,520 "/>
+    <path style="fill: #000000" d="M 20 520 C 17.5,520 15,517.5 15,515 C 15,512.5 17.5,510 20,510 C 22.5,510 25,512.5 25,515 C 25,517.5 22.5,520 20,520z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 20 520 C 17.5,520 15,517.5 15,515 C 15,512.5 17.5,510 20,510 C 22.5,510 25,512.5 25,515 C 25,517.5 22.5,520 20,520"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="220,360 40,360 40,540 "/>
+    <path style="fill: #000000" d="M 40 540 C 37.5,540 35,537.5 35,535 C 35,532.5 37.5,530 40,530 C 42.5,530 45,532.5 45,535 C 45,537.5 42.5,540 40,540z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 40 540 C 37.5,540 35,537.5 35,535 C 35,532.5 37.5,530 40,530 C 42.5,530 45,532.5 45,535 C 45,537.5 42.5,540 40,540"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="220,340 140,340 140,620 "/>
+    <path style="fill: #000000" d="M 140 620 C 137.5,620 135,617.5 135,615 C 135,612.5 137.5,610 140,610 C 142.5,610 145,612.5 145,615 C 145,617.5 142.5,620 140,620z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 140 620 C 137.5,620 135,617.5 135,615 C 135,612.5 137.5,610 140,610 C 142.5,610 145,612.5 145,615 C 145,617.5 142.5,620 140,620"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="220,320 120,320 120,600 "/>
+    <path style="fill: #000000" d="M 120 600 C 117.5,600 115,597.5 115,595 C 115,592.5 117.5,590 120,590 C 122.5,590 125,592.5 125,595 C 125,597.5 122.5,600 120,600z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 120 600 C 117.5,600 115,597.5 115,595 C 115,592.5 117.5,590 120,590 C 122.5,590 125,592.5 125,595 C 125,597.5 122.5,600 120,600"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="300,280 320,280 320,240 40,240 40,360 "/>
+    <path style="fill: #000000" d="M 40 360 C 37.5,360 35,357.5 35,355 C 35,352.5 37.5,350 40,350 C 42.5,350 45,352.5 45,355 C 45,357.5 42.5,360 40,360z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 40 360 C 37.5,360 35,357.5 35,355 C 35,352.5 37.5,350 40,350 C 42.5,350 45,352.5 45,355 C 45,357.5 42.5,360 40,360"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="800,680 780,680 780,1000 "/>
+    <path style="fill: #000000" d="M 780 1000 C 777.5,1000 775,997.5 775,995 C 775,992.5 777.5,990 780,990 C 782.5,990 785,992.5 785,995 C 785,997.5 782.5,1000 780,1000z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 780 1000 C 777.5,1000 775,997.5 775,995 C 775,992.5 777.5,990 780,990 C 782.5,990 785,992.5 785,995 C 785,997.5 782.5,1000 780,1000"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="800,460 780,460 780,680 "/>
+    <path style="fill: #000000" d="M 780 680 C 777.5,680 775,677.5 775,675 C 775,672.5 777.5,670 780,670 C 782.5,670 785,672.5 785,675 C 785,677.5 782.5,680 780,680z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 780 680 C 777.5,680 775,677.5 775,675 C 775,672.5 777.5,670 780,670 C 782.5,670 785,672.5 785,675 C 785,677.5 782.5,680 780,680"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="800,240 780,240 780,460 "/>
+    <path style="fill: #000000" d="M 780 460 C 777.5,460 775,457.5 775,455 C 775,452.5 777.5,450 780,450 C 782.5,450 785,452.5 785,455 C 785,457.5 782.5,460 780,460z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 780 460 C 777.5,460 775,457.5 775,455 C 775,452.5 777.5,450 780,450 C 782.5,450 785,452.5 785,455 C 785,457.5 782.5,460 780,460"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="420" y="1060">
+    <tspan x="420" y="1060">General conn. to 74HC595:</tspan>
+    <tspan x="420" y="1076">Vcc + MR --&gt; 5V</tspan>
+    <tspan x="420" y="1092">GND + OE --&gt; GND</tspan>
+    <tspan x="420" y="1108">ST_CP --&gt; 10 + capacitor --&gt; GND</tspan>
+    <tspan x="420" y="1124">SH_CP --&gt; 11</tspan>
+    <tspan x="420" y="1140">1. DS --&gt; 12</tspan>
+    <tspan x="420" y="1156">1. SOUT --&gt; 2. DS ... cascading ...</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="880" y1="660" x2="1060" y2="660"/>
+    <path style="fill: #000000" d="M 1060 660 C 1060,662.5 1057.5,665 1055,665 C 1052.5,665 1050,662.5 1050,660 C 1050,657.5 1052.5,655 1055,655 C 1057.5,655 1060,657.5 1060,660z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 1060 660 C 1060,662.5 1057.5,665 1055,665 C 1052.5,665 1050,662.5 1050,660 C 1050,657.5 1052.5,655 1055,655 C 1057.5,655 1060,657.5 1060,660"/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="880" y1="440" x2="1060" y2="440"/>
+    <path style="fill: #000000" d="M 1060 440 C 1060,442.5 1057.5,445 1055,445 C 1052.5,445 1050,442.5 1050,440 C 1050,437.5 1052.5,435 1055,435 C 1057.5,435 1060,437.5 1060,440z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 1060 440 C 1060,442.5 1057.5,445 1055,445 C 1052.5,445 1050,442.5 1050,440 C 1050,437.5 1052.5,435 1055,435 C 1057.5,435 1060,437.5 1060,440"/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="880" y1="220" x2="1060" y2="220"/>
+    <path style="fill: #000000" d="M 1060 220 C 1060,222.5 1057.5,225 1055,225 C 1052.5,225 1050,222.5 1050,220 C 1050,217.5 1052.5,215 1055,215 C 1057.5,215 1060,217.5 1060,220z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 1060 220 C 1060,222.5 1057.5,225 1055,225 C 1052.5,225 1050,222.5 1050,220 C 1050,217.5 1052.5,215 1055,215 C 1057.5,215 1060,217.5 1060,220"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="220,300 20,300 20,420 "/>
+    <path style="fill: #000000" d="M 20 420 C 17.5,420 15,417.5 15,415 C 15,412.5 17.5,410 20,410 C 22.5,410 25,412.5 25,415 C 25,417.5 22.5,420 20,420z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 20 420 C 17.5,420 15,417.5 15,415 C 15,412.5 17.5,410 20,410 C 22.5,410 25,412.5 25,415 C 25,417.5 22.5,420 20,420"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="440" y="-20">
+    <tspan x="440" y="-20">Cart ROM-Reader v0.1</tspan>
+  </text>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="480,200 40,200 40,240 "/>
+    <path style="fill: #000000" d="M 40 240 C 37.5,240 35,237.5 35,235 C 35,232.5 37.5,230 40,230 C 42.5,230 45,232.5 45,235 C 45,237.5 42.5,240 40,240z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 40 240 C 37.5,240 35,237.5 35,235 C 35,232.5 37.5,230 40,230 C 42.5,230 45,232.5 45,235 C 45,237.5 42.5,240 40,240"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="580,200 600,200 600,160 40,160 40,200 "/>
+    <path style="fill: #000000" d="M 40 200 C 37.5,200 35,197.5 35,195 C 35,192.5 37.5,190 40,190 C 42.5,190 45,192.5 45,195 C 45,197.5 42.5,200 40,200z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 40 200 C 37.5,200 35,197.5 35,195 C 35,192.5 37.5,190 40,190 C 42.5,190 45,192.5 45,195 C 45,197.5 42.5,200 40,200"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="232" y="496">
+    <tspan x="232" y="496">ARDUINO</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="505" y="176">
+    <tspan x="505" y="176">SNES-CART</tspan>
+  </text>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="480,640 460,640 460,1020 "/>
+    <path style="fill: #000000" d="M 460 1020 C 457.5,1020 455,1017.5 455,1015 C 455,1012.5 457.5,1010 460,1010 C 462.5,1010 465,1012.5 465,1015 C 465,1017.5 462.5,1020 460,1020z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 460 1020 C 457.5,1020 455,1017.5 455,1015 C 455,1012.5 457.5,1010 460,1010 C 462.5,1010 465,1012.5 465,1015 C 465,1017.5 462.5,1020 460,1020"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="580,640 600,640 600,1020 "/>
+    <path style="fill: #000000" d="M 600 1020 C 597.5,1020 595,1017.5 595,1015 C 595,1012.5 597.5,1010 600,1010 C 602.5,1010 605,1012.5 605,1015 C 605,1017.5 602.5,1020 600,1020z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 600 1020 C 597.5,1020 595,1017.5 595,1015 C 595,1012.5 597.5,1010 600,1010 C 602.5,1010 605,1012.5 605,1015 C 605,1017.5 602.5,1020 600,1020"/>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="640" y1="561" x2="800" y2="560"/>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="20" y="1060">
+    <tspan x="20" y="1060">Parts list:</tspan>
+    <tspan x="20" y="1076">1x Card Edge Connector</tspan>
+    <tspan x="20" y="1092">     (orig. SNES 62 pin or general 70/72 pin 0.1")</tspan>
+    <tspan x="20" y="1108">     DANGER OF DAMAGING YOUR CARTS - </tspan>
+    <tspan x="20" y="1124">     PLEASE READ CAREFULLY:</tspan>
+    <tspan x="20" y="1140">     --&gt; The diagram shows only the "middle"</tspan>
+    <tspan x="20" y="1156">           part of the SNES connector starting from</tspan>
+    <tspan x="20" y="1172">           pin 5!</tspan>
+    <tspan x="20" y="1188">     --&gt; If you are using a general card edge</tspan>
+    <tspan x="20" y="1204">           connector e.g. with 72 pins, you have to</tspan>
+    <tspan x="20" y="1220">           take the cart's circuit board out of the </tspan>
+    <tspan x="20" y="1236">           cart case and carefully place it on the </tspan>
+    <tspan x="20" y="1252">           connector as the pins are not aligned </tspan>
+    <tspan x="20" y="1268">           exactly aligned to 0.1"!</tspan>
+    <tspan x="20" y="1284">4x IO-Expander 74HC595</tspan>
+    <tspan x="20" y="1300">28x Resistor 470 Ohm</tspan>
+    <tspan x="20" y="1316">1x Ceramic capacitor 100nF</tspan>
+    <tspan x="20" y="1332"></tspan>
+  </text>
+  <g>
+    <g>
+      <rect style="fill: #ffffff" x="480" y="180" width="100" height="480"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="480" y="180" width="100" height="480"/>
+    </g>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="482.522" y="205.046">
+      <tspan x="482.522" y="205.046">GND</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="546.728" y="205.046">
+      <tspan x="546.728" y="205.046">GND</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="482.522" y="225.046">
+      <tspan x="482.522" y="225.046">A11</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="482.522" y="245.046">
+      <tspan x="482.522" y="245.046">A10</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="482.522" y="265.046">
+      <tspan x="482.522" y="265.046">A9</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="482.522" y="285.046">
+      <tspan x="482.522" y="285.046">A8</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="482.522" y="305.046">
+      <tspan x="482.522" y="305.046">A7</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="482.522" y="325.046">
+      <tspan x="482.522" y="325.046">A6</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="482.522" y="345.046">
+      <tspan x="482.522" y="345.046">A5</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="482.522" y="365.046">
+      <tspan x="482.522" y="365.046">A4</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="482.522" y="385.046">
+      <tspan x="482.522" y="385.046">A3</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="482.522" y="405.046">
+      <tspan x="482.522" y="405.046">A2</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="482.522" y="425.046">
+      <tspan x="482.522" y="425.046">A1</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="482.522" y="445.046">
+      <tspan x="482.522" y="445.046">A0</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="482.522" y="465.046">
+      <tspan x="482.522" y="465.046">/IRQ</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="482.522" y="485.046">
+      <tspan x="482.522" y="485.046">D0</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="482.522" y="505.046">
+      <tspan x="482.522" y="505.046">D1</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="482.522" y="525.046">
+      <tspan x="482.522" y="525.046">D2</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="482.522" y="545.046">
+      <tspan x="482.522" y="545.046">D3</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="482.522" y="565.046">
+      <tspan x="482.522" y="565.046">/RD</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="482.522" y="585.046">
+      <tspan x="482.522" y="585.046">Co_p1</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="482.522" y="605.046">
+      <tspan x="482.522" y="605.046">Ci_p7</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="482.522" y="625.046">
+      <tspan x="482.522" y="625.046">/RESET</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="482.522" y="645.046">
+      <tspan x="482.522" y="645.046">Vcc</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="551.772" y="225.046">
+      <tspan x="551.772" y="225.046">A12</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="551.772" y="245.046">
+      <tspan x="551.772" y="245.046">A13</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="551.772" y="265.046">
+      <tspan x="551.772" y="265.046">A14</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="551.772" y="285.046">
+      <tspan x="551.772" y="285.046">A15</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="550.09" y="305.046">
+      <tspan x="550.09" y="305.046">BA0</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="550.09" y="325.046">
+      <tspan x="550.09" y="325.046">BA1</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="550.09" y="345.046">
+      <tspan x="550.09" y="345.046">BA2</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="550.09" y="365.046">
+      <tspan x="550.09" y="365.046">BA3</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="550.09" y="385.046">
+      <tspan x="550.09" y="385.046">BA4</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="550.09" y="405.046">
+      <tspan x="550.09" y="405.046">BA5</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="550.09" y="425.046">
+      <tspan x="550.09" y="425.046">BA6</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="550.09" y="445.046">
+      <tspan x="550.09" y="445.046">BA7</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="554.296" y="465.046">
+      <tspan x="554.296" y="465.046">/CS</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="557.658" y="485.046">
+      <tspan x="557.658" y="485.046">D4</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="557.658" y="505.046">
+      <tspan x="557.658" y="505.046">D5</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="557.658" y="525.046">
+      <tspan x="557.658" y="525.046">D6</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="557.658" y="545.046">
+      <tspan x="557.658" y="545.046">D7</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="550.09" y="565.046">
+      <tspan x="550.09" y="565.046">/WR</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="538.318" y="585.046">
+      <tspan x="538.318" y="585.046">Co_p2</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="541.682" y="605.046">
+      <tspan x="541.682" y="605.046">Ci_p6</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="551.772" y="625.046">
+      <tspan x="551.772" y="625.046">CLK</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="553.454" y="645.046">
+      <tspan x="553.454" y="645.046">Vcc</tspan>
+    </text>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="480" y="180">
+    <tspan x="480" y="180">5</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="700" y="1060">
+    <tspan x="700" y="1060">(C) 2013 Michael Kovacs   /   2013-04-07</tspan>
+    <tspan x="700" y="1076"></tspan>
+    <tspan x="700" y="1092">This design is provided AS IS, "WITH ALL FAULTS",</tspan>
+    <tspan x="700" y="1108">free of charge and WITHOUT ANY WARRANTY!</tspan>
+    <tspan x="700" y="1124"></tspan>
+    <tspan x="700" y="1140">All trademarks are property of their respective holders.</tspan>
+    <tspan x="700" y="1156"></tspan>
+    <tspan x="700" y="1172">Please find further details in the README-file.</tspan>
+  </text>
+</svg>
